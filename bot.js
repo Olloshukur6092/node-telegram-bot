@@ -5,7 +5,7 @@ const axios = require("axios");
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 
-const bot = new TelegramBot(BOT_TOKEN, { polling: false });
+const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
