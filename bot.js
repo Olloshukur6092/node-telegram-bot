@@ -6,7 +6,6 @@ const axios = require("axios");
 const BOT_TOKEN = process.env.BOT_TOKEN;
 
 const bot = new TelegramBot(BOT_TOKEN, { polling: false });
-bot.setWebHook('https://node-telegram-bot-eta.vercel.app/api/telegram');
 
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
